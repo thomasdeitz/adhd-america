@@ -1,0 +1,108 @@
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+      @content;
+  }
+}
+
+$on-laptop: 1024px;
+$on-palm: 768px;
+$gutter-width: 20px;
+
+$gutter-width: 4%;
+$columns: 12;
+
+$breakpoints: ( base: '', laptop: $on-laptop, palm: $on-palm ); //list large to small.
+
+.container {
+  position: relative;
+  width: 80%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @include media-query($on-laptop) {
+    width: 100% - $gutter-width;
+  }
+
+  .row{
+    margin-left: - $gutter-width;
+    > * {
+      margin-left: $gutter-width;
+    }
+  }
+  
+  &:after,
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .column,
+  .columns {
+    width: 100% - $gutter-width;
+    min-height: 1em;
+    float: left;
+    box-sizing: border-box;
+    margin-left: $gutter-width;
+
+    //loops through each device
+    @each $device, $size in $breakpoints {
+
+      //loops through each column
+      @for $i from 1 through $columns {
+        $column-count: $columns;
+        $base-class: $i;
+
+        //calculated variables
+        $base-column-width: (100%/$column-count)*$i;
+        $column-width: $base-column-width - $gutter-width;
+
+        @if $device == 'base' {
+
+          //desktop column widths
+          &-#{$base-class} {
+            width: $column-width;
+
+            @include media-query($on-laptop) {
+              width: 100% - $gutter-width;
+            }
+          }
+
+          //desktop column offsets
+          &.offset-by-#{$base-class} {
+            margin-left: $base-column-width;
+
+            @include media-query($on-laptop) {
+              margin-left: $gutter-width;
+            }
+          }
+
+          @include media-query($on-laptop) {
+            width: 100% - $gutter-width;
+
+            &[class*='offset-by'] {
+              margin-left: $gutter-width;
+            }
+          }
+        } @else {
+
+          //responsive column widths
+          @media screen and (max-width: $size) {
+
+            &.#{$device}-#{$base-class} {
+              width: $column-width;
+            }
+
+            //responsive column offsets
+            &.#{$device}-offset-by-#{$base-class} {
+              margin-left: $base-column-width;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
