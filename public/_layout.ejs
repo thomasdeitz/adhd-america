@@ -1,0 +1,12 @@
+<html>
+  <head>
+    <title><%- title %></title>
+    <script src="/javascripts/jquery.js">
+    </script><script src="/javascripts/app.js"></script>
+  </head>
+  <body>
+    <%- partial("_shared/header") %>
+    <%- yield %>
+    <%- partial("_shared/footer") %>
+  </body>
+</html>
