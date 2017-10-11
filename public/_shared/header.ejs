@@ -1,12 +1,18 @@
 <header id="siteHeader">
   <div class="container">
-  <nav class="columns columns-12">
-    <ul>
-      <li>test</li>
-      <li>test</li>
-      <li>test</li>
-      <li>test</li>
-    </ul>
-  </nav>
+    <div class="col-2 col-sm-12"></div>
+    <nav class="col-10 col-sm-12">
+      <ul>
+        <% for(var nav in main_navigation) { %>
+          <% var thisNav = main_navigation[nav]; %>
+          <% var isActive = (current.path[0] == thisNav.href) ? 'active' : ''; %>
+          <li>
+            <a  class="<%- isActive %>" 
+                href="/<%- thisNav.href %>" 
+                title="<%- thisNav.title %>"><%- thisNav.label %></a>
+          </li>
+        <% } %>
+      </ul>
+    </nav>
   </div>
 </header>

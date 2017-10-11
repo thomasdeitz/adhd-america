@@ -1,0 +1,27 @@
+.marquee {
+  height: 100vh;
+  overflow:hidden;
+
+  .image {
+    height:100%;
+    background-color: map-get($colors, theme-gray);
+    background-size:cover;
+    background-position: center center;
+    transform: scale(1.01) rotate(-.5deg);
+    animation-duration: 20s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-name: kenB;
+  }
+}
+
+
+@keyframes kenB {
+  from {
+    transform: scale(1.01) rotate(-.5deg);
+  }
+  to {
+    transform: scale(1.1) rotate(1.5deg);
+  }
+}

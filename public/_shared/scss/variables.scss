@@ -1,0 +1,26 @@
+$colors: (
+  primary: #ED1C24,
+  secondary: #1C75BC,
+  success: green,
+  warning: gold,
+  error: red,
+  theme-black: black,
+  theme-gray: lighten(black, 70),
+  theme-white: white,
+);
+
+$grid-config: (
+  columns: 12,
+  gutter-width: 4%
+);
+
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size: 18px;
+$small-font-size: $base-font-size*.75;
+$large-font-size: $base-font-size*1.5;
+$h6-font-size: $base-font-size*.75;
+$h5-font-size: $base-font-size;
+$h4-font-size: $base-font-size*1.25;
+$h3-font-size: $base-font-size*1.5;
+$h2-font-size: $base-font-size*2;
+$h1-font-size: $base-font-size*2.5;

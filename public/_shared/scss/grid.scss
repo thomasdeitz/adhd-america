@@ -1,17 +1,13 @@
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
-      @content;
-  }
-}
-
+$on-desktop: 1280px;
 $on-laptop: 1024px;
 $on-palm: 768px;
-$gutter-width: 20px;
 
-$gutter-width: 4%;
-$columns: 12;
-
-$breakpoints: ( base: '', laptop: $on-laptop, palm: $on-palm ); //list large to small.
+$breakpoints: ( //list small to large.
+  sm : ( ul: $on-palm ),
+  md : ( ll: $on-palm, ul: #{$on-laptop} - 1 ),
+  lg : ( ll: $on-laptop, ul: #{$on-desktop} - 1 ),
+  xl : ( ll: $on-desktop )
+);
 
 .container {
   position: relative;
@@ -21,14 +17,10 @@ $breakpoints: ( base: '', laptop: $on-laptop, palm: $on-palm ); //list large to 
   padding: 0 20px;
   box-sizing: border-box;
 
-  @include media-query($on-laptop) {
-    width: 100% - $gutter-width;
-  }
-
   .row{
-    margin-left: - $gutter-width;
+    margin-left: - map-get($grid-config, gutter-width);
     > * {
-      margin-left: $gutter-width;
+      margin-left: map-get($grid-config, gutter-width);
     }
   }
   
@@ -39,70 +31,51 @@ $breakpoints: ( base: '', laptop: $on-laptop, palm: $on-palm ); //list large to 
     clear: both;
   }
 
-  .column,
-  .columns {
-    width: 100% - $gutter-width;
+  [class^="col"] {
+    width: 100% - map-get($grid-config, gutter-width);
     min-height: 1em;
     float: left;
     box-sizing: border-box;
-    margin-left: $gutter-width;
+    margin-left: map-get($grid-config, gutter-width);
 
-    //loops through each device
-    @each $device, $size in $breakpoints {
+    @for $i from 1 through map-get($grid-config, columns) {
+      $class: '.col-'+$i;
+      $base-column-width: (100%/map-get($grid-config, columns))*$i;
+      $column-width: $base-column-width - map-get($grid-config, gutter-width);
+      
+      &#{$class} {
+        width: $column-width;
+      }
 
-      //loops through each column
-      @for $i from 1 through $columns {
-        $column-count: $columns;
-        $base-class: $i;
-
-        //calculated variables
-        $base-column-width: (100%/$column-count)*$i;
-        $column-width: $base-column-width - $gutter-width;
-
-        @if $device == 'base' {
-
-          //desktop column widths
-          &-#{$base-class} {
-            width: $column-width;
-
-            @include media-query($on-laptop) {
-              width: 100% - $gutter-width;
+      @each $size, $map in $breakpoints { 
+        $ll: map-get($map, ll);
+        $ul: map-get($map, ul);
+        $isSmallest: map-has-key($map, ul) and not(map-has-key($map, ll));
+        $isLargest: map-has-key($map, ll) and not(map-has-key($map, ul));
+        $responsize-class: '.col-'+$size+'-'+$i;
+        
+        
+          @if ($isSmallest) {
+            @media screen and (max-width: $ul) {
+              &#{$responsize-class} {
+                width: $column-width;
+              }
             }
-          }
-
-          //desktop column offsets
-          &.offset-by-#{$base-class} {
-            margin-left: $base-column-width;
-
-            @include media-query($on-laptop) {
-              margin-left: $gutter-width;
+          } @else if ($isLargest) {
+            @media screen and (min-width: $ll) {
+              &#{$responsize-class} {
+                width: $column-width;
+              }
             }
-          }
-
-          @include media-query($on-laptop) {
-            width: 100% - $gutter-width;
-
-            &[class*='offset-by'] {
-              margin-left: $gutter-width;
+          } @else {
+            @media screen and (min-width: $ll) and (max-width: $ul ) {
+              &#{$responsize-class} {
+                width: $column-width;
+              }
             }
-          }
-        } @else {
-
-          //responsive column widths
-          @media screen and (max-width: $size) {
-
-            &.#{$device}-#{$base-class} {
-              width: $column-width;
-            }
-
-            //responsive column offsets
-            &.#{$device}-offset-by-#{$base-class} {
-              margin-left: $base-column-width;
-            }
-          }
+          
         }
       }
     }
   }
 }
-
