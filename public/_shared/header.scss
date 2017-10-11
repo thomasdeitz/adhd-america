@@ -1,12 +1,27 @@
 header#siteHeader {
+  top:40px;
   background-color: rgba(black, .4);
-  border-bottom: 1px solid rgba(black, .8);
+  //border-top: 1px solid rgba(black, .8);
+  //border-bottom: 1px solid rgba(black, .8);
   position:absolute;
   width:100%;
   z-index: 1;
 
+  .logo {
+    position:absolute;
+    top:-30px;
+    width:80px;
+    height: 160px;
+    left: 50%;
+    transform: translateZ(-50%);
+  }
+
   nav {
     text-align:right;
+
+    &:last-child {
+      text-align:left;
+    }
     
     ul {
       list-style: none;
@@ -21,11 +36,14 @@ header#siteHeader {
           text-decoration: none;
           font-weight:700;
           font-size: $small-font-size;
-          padding: 30px;
+          padding: 20px;
           display:inline-block;
           text-transform: uppercase;
 
           &:hover {
+            opacity: .7;
+          }
+          &.active {
             color: map-get($colors, primary);
           }
         }

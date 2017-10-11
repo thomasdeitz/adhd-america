@@ -1,10 +1,31 @@
+<% var navLeft = main_navigation.slice(0,2); %>
+<% var navRight = main_navigation.slice(2,4); %>
+
 <header id="siteHeader">
   <div class="container">
-    <div class="col-2 col-sm-12"></div>
-    <nav class="col-10 col-sm-12">
+    <nav class="col-5 col-sm-12">
       <ul>
-        <% for(var nav in main_navigation) { %>
-          <% var thisNav = main_navigation[nav]; %>
+        <% for(var nav in navLeft) { %>
+          <% var thisNav = navLeft[nav]; %>
+          <% var isActive = (current.path[0] == thisNav.href) ? 'active' : ''; %>
+          <li>
+            <a  class="<%- isActive %>" 
+                href="/<%- thisNav.href %>" 
+                title="<%- thisNav.title %>"><%- thisNav.label %></a>
+          </li>
+        <% } %>
+      </ul>
+    </nav>
+    <div class="col-2 col-sm-12">
+      <a  href="/" 
+          title="Go to homepage.">
+        <%- partial("/logo") %>
+      </a>
+    </div>
+    <nav class="col-5 col-sm-12">
+      <ul>
+        <% for(var nav in navRight) { %>
+          <% var thisNav = navRight[nav]; %>
           <% var isActive = (current.path[0] == thisNav.href) ? 'active' : ''; %>
           <li>
             <a  class="<%- isActive %>" 
