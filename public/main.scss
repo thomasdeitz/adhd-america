@@ -7,5 +7,25 @@
 
 @import '_shared/logo';
 @import '_shared/header';
+@import '_shared/nav';
 @import '_shared/marquee';
 @import '_shared/footer';
+
+html {
+  background-color: map-get($colors, primary);
+}
+
+main {
+  background-color: map-get($colors, theme-white);
+}
+
+article {
+  //margin-top: 80px;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+
+  p:first-of-type {
+    //color: map-get($colors, primary);
+    font-size:28px;
+  }
+}

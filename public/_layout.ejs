@@ -2,11 +2,16 @@
   <head>
     <title><%- title %></title>
     <meta name="description" content="<%= description %>" />
+    <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One|Rubik:300,300i,700" rel="stylesheet">
     <link rel="stylesheet" href="/main.css">
   </head>
   <body>
+    <%- partial("_shared/nav") %>
     <%- partial("_shared/header") %>
-    <%- yield %>
+    <main>
+      <%- partial("_shared/marquee") %>
+      <%- yield %>
+    </main>
     <%- partial("_shared/footer") %>
   </body>
 </html>

@@ -1,4 +1,34 @@
 body {
-  font-family: $base-font-family;
+  font-family: $sans-font-family;
+  font-weight:300;
   font-size: $base-font-size;
+  line-height:1.75;
+  color: map-get($colors, theme-black);
+
+  small {
+    font-size: 1vmin;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  h2 {
+    position:relative;
+    text-align:center;
+
+    span {
+      position:relative;
+      background: white;
+      padding: 0px 1vmin;
+    }
+    &:before {
+      content:"";
+      position:absolute;
+      top:50%;
+      left:0px;
+      right:0px;
+      border-bottom: 1px solid map-get($colors, theme-black);
+    }
+  }
 }

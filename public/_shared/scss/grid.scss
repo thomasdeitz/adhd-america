@@ -39,7 +39,7 @@ $breakpoints: ( //list small to large.
     margin-left: map-get($grid-config, gutter-width);
 
     @for $i from 1 through map-get($grid-config, columns) {
-      $class: '.col-'+$i;
+      $class: '.columns-'+$i;
       $base-column-width: (100%/map-get($grid-config, columns))*$i;
       $column-width: $base-column-width - map-get($grid-config, gutter-width);
       

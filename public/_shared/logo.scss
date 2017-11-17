@@ -9,4 +9,22 @@
   .stripes {
     fill:#EC1C24;
   }
+
+  .star {
+    fill: map-get($colors, primary);
+  }
+
+  .accent {
+    fill: map-get($colors, primary);
+  }
+
+  .adhd {
+    fill: map-get($colors, primary);
+  }
+
+  .open & {
+    .adhd, .accent, .star {
+      fill: white !important;
+    }
+  }
 }

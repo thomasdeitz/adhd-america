@@ -1,54 +1,47 @@
 header#siteHeader {
-  top:40px;
-  background-color: rgba(black, .4);
-  //border-top: 1px solid rgba(black, .8);
-  //border-bottom: 1px solid rgba(black, .8);
+  top:0px;
   position:absolute;
+  padding: 10px 0px;
   width:100%;
   z-index: 1;
 
   .logo {
-    position:absolute;
-    top:-30px;
-    width:80px;
-    height: 160px;
-    left: 50%;
-    transform: translateZ(-50%);
+    position:relative;
+    width:auto;
+    height: 80px;
+    transition: transform .2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
-  nav {
-    text-align:right;
-
-    &:last-child {
-      text-align:left;
+  span {
+    cursor:pointer;
+    position:absolute;
+    right:0px;
+    top:50%;
+    transform: translateY(-50%);
+    width:40px;
+    height:30px;
+    border-bottom:3px solid map-get($colors, primary);
+    &:after, &:before {
+      content:"";
+      position:absolute;
+      width:100%;
+      top:0px;
+      border-bottom:3px solid map-get($colors, primary);
     }
-    
-    ul {
-      list-style: none;
-      margin:0;
-      padding:0;
+    &:before {
+      top:50%;
+    }
 
-      li {
-        display:inline-block;
-
-        a {
-          color: map-get($colors, theme-white);
-          text-decoration: none;
-          font-weight:700;
-          font-size: $small-font-size;
-          padding: 20px;
-          display:inline-block;
-          text-transform: uppercase;
-
-          &:hover {
-            opacity: .7;
-          }
-          &.active {
-            color: map-get($colors, primary);
-          }
-        }
+    .open & {
+      color:white;
+      
+      &, &:after, &:before {
+        border-color: white;
       }
     }
-
   }
 }

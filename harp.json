@@ -4,24 +4,39 @@
     "description": "ADHD America, Inc., a non-for profit organization, provides innovative technology and resources for those children and young adults that are in need of improving their performance in school and in life.",
     "main_navigation": [
       {
-        "href":"our_mission",
-        "label":"Our Mission",
+        "href":"the_story",
+        "label":"Our Story",
         "title":"Learn about our mission."
       },
       {
-        "href":"awareness",
-        "label":"Awareness",
-        "title":"Learn about ADHD."
+        "href":"what_is_adhd",
+        "label":"What is ADHD?",
+        "title":"The Definition of ADHD"
       },
       {
-        "href":"team_adhd_america",
-        "label":"The Team",
-        "title":"Learn more about the ADHD America Cycling Team."
+        "href":"the_diagnosis",
+        "label":"The Diagnosis",
+        "title":"The Diagnosis"
       },
       {
-        "href":"contact",
-        "label":"Contact US",
-        "title":"Learn about our mission."
+        "href":"what_about_medications",
+        "label":"What About Medications?",
+        "title":"The Potential Impact Of ADHD Medication."
+      },
+      {
+        "href":"outreach",
+        "label":"Outreach",
+        "title":"Students Coaching Students"
+      },
+      {
+        "href":"impact",
+        "label":"Our Impact",
+        "title":"The Impact We Hope To Have"
+      },
+      {
+        "href":"get_involved",
+        "label":"Get Involved",
+        "title":"How To Get Involved"
       }
     ]
   }

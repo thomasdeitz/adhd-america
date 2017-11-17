@@ -1,10 +1,10 @@
 $colors: (
-  primary: #ED1C24,
+  primary: rgb(241,90,36),
   secondary: #1C75BC,
   success: green,
   warning: gold,
   error: red,
-  theme-black: black,
+  theme-black: lighten(black, 30),
   theme-gray: lighten(black, 70),
   theme-white: white,
 );
@@ -14,8 +14,10 @@ $grid-config: (
   gutter-width: 4%
 );
 
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size: 18px;
+$serif-font-family: "Rubik", sans-serif;
+$sans-font-family: "Rubik", sans-serif;
+$display-font-family: "Rubik Mono One", Impact, Helvetica, Arial, sans-serif;
+$base-font-size: 21px;
 $small-font-size: $base-font-size*.75;
 $large-font-size: $base-font-size*1.5;
 $h6-font-size: $base-font-size*.75;

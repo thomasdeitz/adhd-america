@@ -1,3 +1,12 @@
-<div class="marquee">
-  <div class="image" style="background-image:url(<%- marquee_image %>);"></div>
-</div>
+<% if ( typeof marquee_image != "undefined" ) { %>
+  <div class="marquee">
+    <div class="image" style="background-image:url(<%- marquee_image %>);"></div>
+    <% if ( typeof marquee_text != "undefined" ) { %>
+      <div class="container">
+        <div class="columns columns-12">
+          <h1><%- marquee_text %></h1>
+        </div>
+      </div>
+    <% } %>
+  </div>
+<% } %>
