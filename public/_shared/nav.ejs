@@ -5,7 +5,7 @@
     <% var thisNav = navList[nav]; %>
     <% var isActive = (current.path[0] == thisNav.href) ? 'active' : ''; %>
       <a  class="<%- isActive %>" 
-          href="/<%- thisNav.href %>" 
+          href="<%- github_deploy %>/<%- thisNav.href %>" 
           title="<%- thisNav.title %>"><%- thisNav.label %>
       </a>
   <% } %>

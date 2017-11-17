@@ -1,5 +1,7 @@
 {
   "globals": {
+    "github_deploy": "https://thomasdeitz.github.io/qa.adhd-america.com",
+    "github_deploy": "",
     "title": "ADHD America",
     "description": "ADHD America, Inc., a non-for profit organization, provides innovative technology and resources for those children and young adults that are in need of improving their performance in school and in life.",
     "main_navigation": [
@@ -10,7 +12,7 @@
       },
       {
         "href":"what_is_adhd",
-        "label":"What is ADHD?",
+        "label":"ADHD - The Problem",
         "title":"The Definition of ADHD"
       },
       {
