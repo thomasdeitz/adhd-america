@@ -1,5 +1,5 @@
 nav {
-  position:absolute;
+  position:fixed;
   top:0;
   left:0px;
   right:0px;
@@ -30,16 +30,16 @@ nav {
 }
 
 body main{ transition: transform .2s ease-in-out;}
-body.open {
+body.open, body.contact {
   height:100vh;
   overflow:hidden;
-  nav {
-    transform:translateX(0);
-  }
 
   main {
-  transform: translateY(calc(90vh - 80px)) scale(.9);
-  box-shadow: 0px 0px 40px black;
+    transform: translateY(calc(90vh - 80px)) scale(.9);
+    box-shadow: 0px 0px 40px black;
   }
+}
+body.open nav {
+  transform:translateX(0);
 }
 

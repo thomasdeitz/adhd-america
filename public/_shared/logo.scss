@@ -22,7 +22,7 @@
     fill: map-get($colors, primary);
   }
 
-  .open & {
+  .open &, .contact & {
     .adhd, .accent, .star {
       fill: white !important;
     }

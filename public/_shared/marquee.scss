@@ -2,6 +2,7 @@
   position:relative;
   height: 100vh;
   overflow:hidden;
+  background-color: map-get($colors, primary);
 
   .image {
     position:absolute;
@@ -9,7 +10,6 @@
     right:0px;
     bottom:0px;
     left:0px;
-    background-color: map-get($colors, primary);
     background-size:cover;
     background-position: center center;
     transform: scale(1.01) rotate(-.5deg);
@@ -36,7 +36,7 @@
 
 @keyframes kenB {
   from {
-    transform: scale(1.01) rotate(-.5deg);
+    transform: scale(1.01) rotate(-.3deg);
   }
   to {
     transform: scale(1.1) rotate(1.5deg);

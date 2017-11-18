@@ -16,6 +16,29 @@ header#siteHeader {
     }
   }
 
+  .contact {
+    position:absolute;
+    right: 80px;
+    top:50%;
+    transform: translateY(-50%);
+    width:auto;
+    height: 30px;
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+
+    &:hover {
+      transform: translateY(-50%) scale(1.05);
+    }
+    
+    .shape {
+      fill: map-get($colors, primary);
+
+      .open &, .contact & {
+        fill: map-get($colors, theme-white);
+      }
+    }
+  }
+
   span {
     cursor:pointer;
     position:absolute;
@@ -36,7 +59,7 @@ header#siteHeader {
       top:50%;
     }
 
-    .open & {
+    .contact &, .open & {
       color:white;
       
       &, &:after, &:before {

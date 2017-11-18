@@ -17,6 +17,7 @@ html {
 
 main {
   background-color: map-get($colors, theme-white);
+  width:100vw;
 }
 
 article {
