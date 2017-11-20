@@ -3,8 +3,51 @@
 </svg>
 
 <script>
-  d = function (){
+  function d(){
     var body = document.getElementsByTagName("body");
+    var stepOne = document.getElementById("contactForm").childNodes[1];
+body[0].classList.remove('open');
     body[0].classList.toggle('contact');
+    stepOne.classList.add("active");
+    stepOne.getElementsByTagName("input")[0].focus();
+}
+
+function step(step){
+    console.log('clicked')
+    
+    //var body = document.getElementsByTagName("body");
+    var stepNum = document.getElementById(step);
+    var f = document.getElementsByTagName("FORM")[0];
+  console.log(f)
+    var divs = f.getElementsByTagName("div");
+    [].forEach.call(divs, function(div) {
+  // do whatever
+  div.classList.remove("active");
+});
+  
+    stepNum.classList.add("active");
+    stepNum.getElementsByTagName("input")[0].focus();
+    //console.log(stepNum);
+    return false;
+}
+
+function checkTabPress(e) {
+    'use strict';
+    var ele = document.activeElement;
+
+    if (e.keyCode === 9 && ele.nodeName.toLowerCase() === 'a') {
+        step("stepTwo");
+    }
+}
+
+document.addEventListener('keyup', function (e) {
+    checkTabPress(e);
+}, false);
+
+function review(){
+  var body = document.getElementsByTagName("body");
+    console.log('review');
+    body[0].classList.toggle('review');
+    return false;
 }
 </script>

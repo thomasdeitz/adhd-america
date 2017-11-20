@@ -1,6 +1,38 @@
-<form action="https://formspree.io/tom.deitz@centare.com"
-      method="POST">
-    <input type="text" name="name">
-    <input type="email" name="_replyto">
-    <input type="submit" value="Send">
-</form>
+<section id="contactUs">
+
+  <form id="contactForm" action="https://formspree.io/<%- form_recipient %>"
+        method="POST">
+
+      <div id="stepOne">
+        <label for="name">What is your name?</label>
+        <input required type="text" name="name" placeholder="John Starley">
+        <span>
+          <a onclick="step('stepTwo')">Continue</a>
+          <span>or press TAB</span>
+        </span>
+      </div>
+
+      <div id="stepTwo">
+        <label for="_replyto">What is your email address?</label>
+        <input required type="email" name="_replyto" placeholder="jstarley@safetybikes.com">
+        <span>
+          <a onclick="step('stepThree')">Continue</a>
+          <span>or press TAB</span>
+        </span>
+      </div>
+
+      <div id="stepThree">
+        <label for="message">What can we do for you?</label>
+        <textarea name="message" placeholder="Type message here..."></textarea>
+          <span><a onclick="review()">Continue</a>
+          <span>or press TAB</span>
+        </span>
+      </div>
+
+      <div id="stepFour">
+        <input type="submit" value="Send">
+        <input type="hidden" name="_next" value="/" />
+      </div>
+
+  </form>
+</section>
