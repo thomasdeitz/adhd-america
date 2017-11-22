@@ -1,0 +1,13 @@
+html {
+  background-color: map-get($colors, primary);
+}
+
+main {
+  background-color: map-get($colors, white);
+  width:100vw;
+}
+
+article {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}

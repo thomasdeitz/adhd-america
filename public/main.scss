@@ -1,9 +1,11 @@
 @import '_shared/scss/normalize';
 
 @import '_shared/scss/variables';
-@import '_shared/scss/grid';
-@import '_shared/scss/type';
 //@import '_shared/scss/mixins';
+@import '_shared/scss/elements';
+@import '_shared/scss/type';
+@import '_shared/scss/grid';
+
 
 @import '_shared/logo';
 @import '_shared/header';
@@ -11,22 +13,3 @@
 @import '_shared/contact.form';
 @import '_shared/marquee';
 @import '_shared/footer';
-
-html {
-  background-color: map-get($colors, primary);
-}
-
-main {
-  background-color: map-get($colors, theme-white);
-  width:100vw;
-}
-
-article {
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-
-  p:first-of-type {
-    //color: map-get($colors, primary);
-    font-size:28px;
-  }
-}

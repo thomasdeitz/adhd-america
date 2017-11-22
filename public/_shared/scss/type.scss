@@ -3,41 +3,63 @@ body {
   font-weight:300;
   font-size: $base-font-size;
   line-height:1.75;
-  color: map-get($colors, theme-black);
-  a {position:relative;
-    display:inline-block;
-    color: map-get($colors, primary);
-    transform:skewX(-20deg);
+  color: map-get($colors, black);
+}
 
-    text-decoration: none;
-  }
-  strong, b {
-    font-weight:900;
-  }
-  small {
-    font-size: 1vmin;
-  }
+a {
+  position:relative;
+  display:inline-block;
+  color: map-get($colors, primary);
+  transform:skewX(-20deg);
+  text-decoration: none;
+}
 
-  p {
-    text-align: justify;
-  }
+strong, b {
+  font-weight:900;
+}
 
-  h2 {
-    position:relative;
-    text-align:center;
+small {
+  font-size: $small-font-size;
+}
 
-    span {
-      position:relative;
-      background: white;
-      padding: 0px 1vmin;
-    }
-    &:before {
-      content:"";
-      position:absolute;
-      top:50%;
-      left:0px;
-      right:0px;
-      border-bottom: 1px solid map-get($colors, theme-black);
-    }
+p {
+  text-align: justify;
+
+  article &:first-of-type {
+    font-size:$large-font-size;
   }
+}
+
+h1 {
+  text-align:center;
+  font-size: $h1-font-size;
+  color: map-get($colors, primary);
+}
+
+h2 {
+  text-align:center;
+  font-size: $h2-font-size;
+  color: map-get($colors, primary);
+}
+
+h3 {
+  text-align:center;
+  font-size: $h2-font-size;
+}
+
+h4 {
+  text-align:center;
+  font-size: $h4-font-size;
+  color: map-get($colors, primary);
+}
+
+h5 {
+  text-align:center;
+  font-size: $h5-font-size;
+}
+
+h5 {
+  text-align:center;
+  font-size: $h6-font-size;
+  color: map-get($colors, primary);
 }

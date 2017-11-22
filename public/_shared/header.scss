@@ -34,7 +34,7 @@ header#siteHeader {
       fill: map-get($colors, primary);
 
       .open &, .contact & {
-        fill: map-get($colors, theme-white);
+        fill: map-get($colors, white);
       }
     }
   }

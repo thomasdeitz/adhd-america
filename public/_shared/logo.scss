@@ -1,14 +1,4 @@
 .logo{
-  .background {
-    fill:#FFFFFF;
-    stroke: black;
-  }
-  .star-background{
-    fill:#1B75BB;
-  }
-  .stripes {
-    fill:#EC1C24;
-  }
 
   .star {
     fill: map-get($colors, primary);
@@ -24,7 +14,7 @@
 
   .open &, .contact & {
     .adhd, .accent, .star {
-      fill: white !important;
+      fill: map-get($colors , white ) !important;
     }
   }
 }
