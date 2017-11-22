@@ -2,7 +2,9 @@
   position:relative;
   height: 100vh;
   overflow:hidden;
-  background-color: map-get($colors, primary);
+  background-color: map-get($colors, secondary);
+  font-family: $display-font-family;
+  text-align: center;
 
   .image {
     position:absolute;
@@ -26,19 +28,14 @@
     flex-direction:column;
     justify-content: center;
   }
-  h1 {
-    text-align: center;
-    font-family: $display-font-family;
-    color: map-get($colors, primary);
-  }
 }
 
 
 @keyframes kenB {
   from {
-    transform: scale(1.01) rotate(-.3deg);
+    transform: scale(1.02) rotate(-.3deg);
   }
   to {
-    transform: scale(1.1) rotate(1.5deg);
+    transform: scale(1.15) rotate(1.5deg);
   }
 }

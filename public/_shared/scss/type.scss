@@ -10,8 +10,12 @@ a {
   position:relative;
   display:inline-block;
   color: map-get($colors, primary);
-  transform:skewX(-20deg);
   text-decoration: none;
+  transform-origin: center center;
+  
+  &:hover {
+    transform:scale(1.1);
+  }
 }
 
 strong, b {
@@ -31,35 +35,38 @@ p {
 }
 
 h1 {
-  text-align:center;
+  text-align: center;
+  text-transform: uppercase;
   font-size: $h1-font-size;
   color: map-get($colors, primary);
 }
 
 h2 {
-  text-align:center;
+  text-align: center;
   font-size: $h2-font-size;
   color: map-get($colors, primary);
 }
 
 h3 {
-  text-align:center;
+  text-align: center;
   font-size: $h2-font-size;
 }
 
 h4 {
-  text-align:center;
+  text-align: center;
+  text-transform: uppercase;
   font-size: $h4-font-size;
   color: map-get($colors, primary);
 }
 
 h5 {
-  text-align:center;
+  text-align: center;
   font-size: $h5-font-size;
 }
 
-h5 {
-  text-align:center;
+h6 {
+  text-align: center;
+  text-transform: uppercase;
   font-size: $h6-font-size;
   color: map-get($colors, primary);
 }

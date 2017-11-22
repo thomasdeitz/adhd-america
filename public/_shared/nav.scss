@@ -21,11 +21,7 @@ nav {
     padding:3vmin;
     text-decoration: none;
     letter-spacing: 0;
-    transition: letter-spacing 1s ease-in-out;
-
-    &:hover {
-      letter-spacing: 2;
-    }
+    transition: transform .2s ease-in-out;
   }
 }
 

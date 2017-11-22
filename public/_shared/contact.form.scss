@@ -4,6 +4,7 @@
   position:fixed;
   display:none;
   transform: translateY(-100vh);
+  
   .contact & {
     transform: none;
     display:block;
@@ -71,8 +72,8 @@
   }
   label {
     display:block;
-    color:white;
-    font-size: 3vmin;
+    color:rgba(white, .6);
+    font-size: $base-font-size;
     font-weight:bold;
     font-family: $sans-font-family;
   }
@@ -81,15 +82,14 @@
     background:none;
     outline:none;
     border:none;
-    border-bottom:3px solid transparent;
-    font-size: 6vmin;
+    border-bottom: $border-width solid rgba(black, .2);
+    font-size: $h1-font-size;
     height:100px;
     width:100%;
     color:white;
     font-weight:bold;
     font-family: $sans-font-family;
     margin-bottom: 3vmin;
-    border-color:rgba(black, .2);
 
     &::placeholder {
       color:rgba(black, .2);
@@ -104,15 +104,14 @@
     background:none;
     outline:none;
     border:none;
-    border:3px solid transparent;
-    font-size: 4vmin;
+    border:$border-width solid rgba(black, .2);
+    font-size: $large-font-size;
     height:30vh;
     width:100%;
     color:white;
     font-weight:bold;
     font-family: $sans-font-family;
     margin-bottom: 3vmin;
-    border-color:rgba(black, .2);
 
     &::placeholder {
       color:rgba(black, .2);
@@ -126,7 +125,7 @@
     font-family: $sans-font-family;
     font-weight:bold;
     background:none;
-    border: 3px solid rgba(black, .2);
+    border: $border-width solid rgba(black, .2);
     padding: 2vmin 3vmin;
     font-size: 3vmin;
     line-height: 3vmin;
@@ -135,7 +134,7 @@
     cursor:pointer;
 
     &:hover {
-      background: rgba(black, .2);
+      background-color: rgba(black, .2);
       border-color:transparent;
       color:white;
     }

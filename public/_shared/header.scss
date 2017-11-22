@@ -47,13 +47,13 @@ header#siteHeader {
     transform: translateY(-50%);
     width:40px;
     height:30px;
-    border-bottom:3px solid map-get($colors, primary);
+    border-bottom:$border-width solid map-get($colors, primary);
     &:after, &:before {
       content:"";
       position:absolute;
       width:100%;
       top:0px;
-      border-bottom:3px solid map-get($colors, primary);
+      border-bottom:$border-width solid map-get($colors, primary);
     }
     &:before {
       top:50%;
