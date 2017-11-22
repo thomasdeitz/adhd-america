@@ -14,10 +14,8 @@
 }
 
 function step(step){
-    console.log('clicked')
     var stepNum = document.getElementById(step);
     var f = document.getElementsByTagName("FORM")[0];
-    console.log(f)
     var divs = f.getElementsByTagName("div");
     [].forEach.call(divs, function(div) {
         div.classList.remove("active");

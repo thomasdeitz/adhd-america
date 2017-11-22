@@ -93,8 +93,9 @@
       transform: translateY(100vh);
       transition: transform .5s;
 
-      &:first-of-type {
+      *:not('.contact') &:first-of-type {
         transform: translateY(-100vh);
+        transition: transform 0s;
       }
     
     &.active {
