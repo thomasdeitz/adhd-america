@@ -18,17 +18,13 @@ header#siteHeader {
 
   .contact {
     position:absolute;
-    right: 80px;
+    right: 60px;
     top:50%;
     transform: translateY(-50%);
     width:auto;
-    height: 30px;
+    height: 20px;
     cursor: pointer;
     transition: transform .2s ease-in-out;
-
-    &:hover {
-      transform: translateY(-50%) scale(1.05);
-    }
     
     .shape {
       fill: map-get($colors, primary);
@@ -45,8 +41,8 @@ header#siteHeader {
     right:0px;
     top:50%;
     transform: translateY(-50%);
-    width:40px;
-    height:30px;
+    width:30px;
+    height:20px;
     border-bottom:$border-width solid map-get($colors, primary);
     &:after, &:before {
       content:"";
@@ -57,6 +53,7 @@ header#siteHeader {
     }
     &:before {
       top:50%;
+      width:66%;
     }
 
     .contact &, .open & {
