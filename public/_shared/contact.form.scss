@@ -14,10 +14,11 @@
 }
 
 #contactForm {
-    width: 60vw;
-    margin: 0 20vw;
-    transform: scale(.7);
-    transform-origin: center center;
+  width: 60vw;
+  margin: 0 20vw;
+  transform: scale(.7);
+  transform-origin: center center;
+  
   div {
     > span {
       display:none;
@@ -126,9 +127,9 @@
     font-weight:bold;
     background:none;
     border: $border-width solid rgba(black, .2);
-    padding: 2vmin 3vmin;
-    font-size: 3vmin;
-    line-height: 3vmin;
+    padding: 2vmin $base-padding;
+    font-size: $base-font-size;
+    line-height: $base-padding;
     color: rgba(black, .2);
     border-radius: 7vmin;
     cursor:pointer;

@@ -1,8 +1,8 @@
 #siteFooter {
   background-color:map-get($colors, primary);
   color: map-get($colors, white);
-  padding-top:3vmin;
-  padding-bottom:3vmin;
+  padding-top: $base-padding;
+  padding-bottom: $base-padding;
   text-align:center;
   box-shadow: 0 50vh 0 50vh map-get($colors, primary);
 }
