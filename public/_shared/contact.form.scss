@@ -5,16 +5,17 @@
   right:0px;
   bottom:100px;
   overflow:scroll;
-  transform: translateY(100vh);
-  transition:transform .2s ease-in-out;
+  transform: translateY(-100vh);
+  transition:transform .2s cubic-bezier(.7,-0.2,.3,1.2);
 
   .contact & {
-    transform: translateY(0);
+    transform: none;
   }
 
   form {
     position:relative;
     top: 50%;
+    height:100%;
     transform:translateY(-50%);
     max-width: 500px;
     margin: 0px auto;
@@ -87,40 +88,39 @@
     }
   }
 
-  div {
+  body:not(.review) & div {
     & {
       position:absolute;
-      transform: translateY(100vh);
-      transition: transform .5s;
-
-      *:not('.contact') &:first-of-type {
-        transform: translateY(-100vh);
-        transition: transform 0s;
-      }
+      top:50%;
+      width:100%;
+      transform-origin: center center;
+      transform: translateY(-100vh);
+      transition: transform .5s cubic-bezier(.7,-0.2,.3,1.2);
     
     &.active {
-      transform-origin: center center;
       transform: translateY(-50%);
-      width:100%;
-      top:50%;
+    }
 
-      & ~ div {
-        transform: translateY(-100vh);
-      }
+    & ~ div {
+      transform: translateY(-100vh);
+    }
 
-      & > span {
-        display:inline-block;
-      }
+    & > span {
+      display:inline-block;
+    }
 
-      input {
-        padding: $base-padding 0;
-        font-size: $h1-font-size;
-      }
+    input {
+      padding: $base-padding 0;
+      font-size: $h1-font-size;
+    }
 
-      label {
-        font-size: $base-font-size;
-      }
+    label {
+      font-size: $base-font-size;
     }
   }
 }
+}
+
+body.review {
+  background-color: map-get($colors, secondary);
 }

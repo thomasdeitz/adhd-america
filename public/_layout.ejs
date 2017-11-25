@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One|Rubik:300,300i,700" rel="stylesheet">
     <link rel="stylesheet" href="<%- github_deploy %>/main.css">
   </head>
-  <body>
+  <body class="loading">
     <%- partial("_shared/contact.form") %>
     <%- partial("_shared/nav") %>
     <%- partial("_shared/header") %>
@@ -15,5 +15,34 @@
       <%- yield %>
     </main>
     <%- partial("_shared/footer") %>
+    <script>
+      /*if ( document.readyState === 'complete') {
+        console.log('rere');
+      }
+      document.addEventListener("DOMContentLoaded", function(event) {
+    console.log("DOM fully loaded and parsed");
+  });*/
+  document.onreadystatechange = function () {
+
+    if(document.readyState === 'complete') {
+      document.getElementsByTagName('body')[0].classList.remove('loading');
+    }
+    console.log(document.readyState);
+}
+var allLinks = document.querySelectorAll('a[href]');
+for (var i = 0, n = allLinks.length; i < n; i++) {
+    allLinks[i].onclick = function (e) {
+        var thisLink = this.getAttribute("href");
+        document.getElementsByTagName('body')[0].classList.add('loading');
+        setTimeout(function() {
+  window.location.href = thisLink;
+}, 200);
+        
+        e.preventDefault();
+        
+    };
+}
+
+    </script>
   </body>
 </html>
