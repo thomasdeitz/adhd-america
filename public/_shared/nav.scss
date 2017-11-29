@@ -1,4 +1,4 @@
-nav {
+nav#mainNav {
   position:fixed;
   top:0;
   left:0px;
@@ -11,31 +11,42 @@ nav {
   flex-direction:column;
   justify-content: center;
   transform: translateX(100%);
-  transition: transform .2s ease-in-out;
-  
+  transition: transform 0s 1s;
 
   a {
     width: 80%;
     margin-left: 10%;
     color: white;
-    padding: $base-padding;
+    padding: $tight-padding;
     text-decoration: none;
-    letter-spacing: 0;
-    transition: transform .2s ease-in-out;
+    transform: translateX(100%);
+  }
+
+  
+  @for $i from 0 through 20 {
+    $delay: $i/100*2;
+    @warn $delay;
+    a:nth-child(#{$i}) {
+      transition: transform .5s #{$delay}s cubic-bezier(.7,-0.2,.3,1.2);
+    }
   }
 }
 
-body main{ transition: transform .2s ease-in-out;}
+body main{ transition: transform .5s cubic-bezier(.7,-0.2,.3,1.2);}
 body.open, body.contact {
   height:100vh;
   overflow:hidden;
 
   main {
     transform: translateY(calc(90vh - 80px)) scale(.9);
-    box-shadow: 0px 0px 40px black;
   }
 }
-body.open nav {
+body.open nav#mainNav {
   transform:translateX(0);
+  transition: transform 0s;
+
+  a {
+    transform: translateX(0);
+  }
 }
 

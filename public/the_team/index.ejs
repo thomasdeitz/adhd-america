@@ -1,0 +1,94 @@
+<% marquee_content = partial("/_content/marquee"); %>
+<%- partial("/_sections/mission") %>
+<%- partial("/_sections/iscorp") %>
+<%- partial("/_sections/awareness") %>
+<%- partial("/_sections/app") %>
+<%- partial("/_sections/support") %>
+<%- partial("/_sections/sponsors") %>
+
+<style>
+  .image {
+    
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+  }
+
+  section h1 {
+    transform: translateX(40px);
+    transition:all .5s;
+    margin:0px;
+    margin-top: 20px;
+    opacity:0;
+    line-height:.85;
+  }
+
+  h1 + h1 {
+    margin-top:0px;
+  }
+   
+   section.visible h1 {
+      transform: translateX(0);
+      opacity:1;
+    }
+
+    section p {
+    transform: translateY(40px);
+      transition:all .5s .1s;
+      opacity:0;
+  }
+
+   section.visible p {
+    transform: translateY(0);
+    opacity:1;
+  }
+
+  section li {
+    transform: translateX(40px);
+      transition:all .5s .1s;
+      opacity:0;
+  }
+
+  section li:nth-child(2) {
+      transition:all .5s .2s;
+  }
+
+  section li:nth-child(3) {
+    transition:all .5s .3s;
+  }
+
+  section li:nth-child(4) {
+    transition:all .5s .4s;
+  }
+
+  section li:nth-child(5) {
+    transition:all .5s .5s;
+  }
+
+  section li:nth-child(6) {
+    transition:all .5s .6s;
+  }
+
+  section.visible li {
+    transform: translateX(0);
+    opacity:1;
+  }
+
+  section {
+    padding: 6vmin;
+    overflow:hidden;
+  }
+
+  section img{
+        transform: translateX(-50px);
+      transition:all .5s .1s;
+      opacity:0;
+  }
+
+  section.visible img {
+    transform: translateY(0);
+    opacity:1;
+  }
+
+  </style>
+  <script src="../js/inView.js"></script>
+

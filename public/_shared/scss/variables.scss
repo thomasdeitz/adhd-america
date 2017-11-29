@@ -15,7 +15,8 @@ $grid-config: (
 );
 
 $base-padding: 3vmin;
-$base-input-padding: $base-padding/2;
+$tight-padding: $base-padding/2;
+$base-input-padding: $tight-padding;
 
 $border-width: .25vmin;
 
@@ -23,7 +24,7 @@ $serif-font-family: "Rubik", sans-serif;
 $sans-font-family: "Rubik", sans-serif;
 $display-font-family: "Rubik Mono One", Impact, Helvetica, Arial, sans-serif;
 $base-font-size: 2.75vmin; //21px;
-$small-font-size: $base-font-size*.6;
+$small-font-size: $base-font-size*.75;
 $large-font-size: $base-font-size*1.35;
 $h6-font-size: $base-font-size*.75;
 $h5-font-size: $base-font-size;

@@ -3,7 +3,6 @@
   height: 100vh;
   overflow:hidden;
   background-color: map-get($colors, secondary);
-  font-family: $display-font-family;
   text-align: center;
 
   .image {
@@ -27,6 +26,15 @@
     display: flex;
     flex-direction:column;
     justify-content: center;
+  }
+
+  h1 {
+    font-family: $display-font-family;
+  }
+
+  p {
+    text-align: center;
+    color:white;
   }
 }
 

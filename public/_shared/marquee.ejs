@@ -8,5 +8,11 @@
         </div>
       </div>
     <% } %>
+
+    <% if ( typeof marquee_content !== "undefined" ) { %>
+      <div class="container">
+        <%- marquee_content %>
+      </div>
+    <% } %>
   </div>
 <% } %>
