@@ -1,4 +1,5 @@
-<div class="columns columns-12">
+<div class="columns columns-1"></div>
+<div class="columns columns-10">
 
   <h1>Join the Team</h1>
 

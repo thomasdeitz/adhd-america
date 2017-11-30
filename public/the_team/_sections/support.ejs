@@ -1,8 +1,64 @@
-<section id="support" style="background: black; color: white;">
+<section id="support" style="background: whiteSmoke;">
   <div class="container">
-    <div class="columns-2"></div>
-    <div class="columns-8">
+    <div class="columns-1"></div>
+    <div class="columns-10">
       <%- partial("../_content/support") %>
     </div>
   </div>
 </section>
+
+<style>
+  #support{
+    text-align:center;
+  }
+
+  #support p {
+    text-align:center
+  }
+
+  #support ul{
+    display:flex;
+    justify-content: center;
+    width:100%;
+    padding:0px;
+    margin:0px;
+    list-style: none;
+  }
+
+  #support li {
+    background-color: white;
+    display: inline-block;
+    margin:10px;
+    padding:0;
+    width: 40%;
+  }
+
+#support ul ul {
+  flex-direction: column;
+  width:100%;
+  margin:0;
+
+}
+
+  #support li li {
+    padding:15px 10px;
+    box-sizing:border-box;
+    width:100%;
+    margin:0;
+    border-bottom:1px solid whiteSmoke;
+  }
+
+  #support li li:first-child {
+    background-color: #B23E43;
+    color:white;
+  }
+
+  #support li:last-child li:first-child {
+    background-color: #172C5D;
+    color:white;
+  }
+
+  #support li:last-child li h1 {
+    color: #172C5D;
+  }
+</style>
