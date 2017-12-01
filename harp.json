@@ -8,6 +8,11 @@
     "description": "ADHD America, Inc., a non-for profit organization, provides innovative technology and resources for those children and young adults that are in need of improving their performance in school and in life.",
     "main_navigation": [
       {
+        "href":"",
+        "label":"Home",
+        "title":"Back to the homepage."
+      },
+      {
         "href":"the_story",
         "label":"Our Story",
         "title":"Learn about our mission."
@@ -38,7 +43,7 @@
         "title":"The Impact We Hope To Have"
       },
       {
-        "href":"the_team",
+        "href":"team",
         "label":"The Team",
         "title":"Team ADHD America"
       },

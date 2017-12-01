@@ -1,95 +1,20 @@
 <div class="container">
   <article class="columns columns-2"></article>
   <article class="columns columns-8">
-    <dl>
-      <dt>ADHD - Attention Deficit Hyperactivity Disorder</dt>
-      <dd>An impairment of the <strong>executive functions</strong>.</dd>
-      <dt>Executive Functions</dt>
-      <dd>A set of processes that all have to do with managing oneself and one's resources in order to achieve a goal. It is an umbrella term for the neurologically-based skills
-    involving mental control and self-regulation.</dd>
-    </dl>
+    <%- partial("/_content/definition") %>
   </article>
 </div>
 
 <div class="container">
   <article class="columns columns-2"></article>
   <article class="columns columns-8">
-    <p>For children with ADHD, school too often starts with failure. The consequences only magnify as time progresses into
-adulthood, if untreated. The following statistics are alarming, considering children
-with ADHD compose approximately <b>10%</b> of the school-age
-population.</p>
+    <%- partial("/_content/intro") %>
   </article>
+
   <article class="columns columns-12">
-    <h3>The Early Years</h3>
-    <div class="grid">
-      <span>
-        <h1>50%</h1>
-        <small>Repeat a grade by adolescence</small>
-      </span>
-
-      <span>
-        <h1>10x</h1>
-        <small>More likely to have difficulties with friendships 
-        <br />(20.6% vs. 2.0%)</small>
-      </span>
-
-      <span>
-        <h1>80%</h1>
-        <small>Are two years behind academically by age 11.</small>
-      </span>
-
-      <span>
-        <h1>46%</h1>
-        <small>Of children with ADHD have been suspended</small>
-      </span>
-    </div>
-
-    <h3>Higher Education</h3>
-    <div class="grid">
-      <span>
-        <h1>>30%</h1>
-        <small>graduate from a 4 year institution</small>
-      </span>
-
-      <span>
-        <h1>82%</h1>
-        <small>took on average 10 years to graduate</small>
-      </span>
-
-      <span>
-        <h1>↓GPA</h1>
-        <small>While attending a university</small>
-      </span>
-
-      <span>
-        <h1>35%</h1>
-        <small>eventually drop out</small>
-      </span>
-    </div>
-
-    <h3>Social Costs</h3>
-    <div class="grid">
-      <span>
-        <h1 style="font-size: 5vmin">4-9x</h1>
-        <small>more likely to commit crimes and go to jail</small>
-      </span>
-
-      <span>
-        <h1 style="font-size: 5vmin">143.8m</h1>
-        <small>Days of lost productivity acrooss 10 nations</small>
-      </span>
-
-      <span>
-        <h1 style="font-size: 5vmin">21-45%</h1>
-        <small>of prisoners have ADHD according to 15 studies from peer reviewed journals</small>
-      </span>
-
-      <span>
-        <h1 style="font-size: 5vmin">$36-$52b</h1>
-        <small>estimated annual societal "cost of illness"</small>
-      </span>
-    </div>
-
+    <%- partial("/_content/early_years") %>
+    <%- partial("/_content/higher_education") %>
+    <%- partial("/_content/social") %>
   </article>
 </div>
 
@@ -100,7 +25,7 @@ population.</p>
     }
   }
 
-  .grid h1 {
+  ul h1 {
     color: #B23E43;
     font-size:10vmin;
     margin:0px;
@@ -120,10 +45,12 @@ dt {
     opacity:.75;
   }
 
-  .grid {
+  ul {
+    list-style:none;
     overflow:hidden;
     text-align:center;
     display: flex;
+    flex-wrap:wrap;
     flex-direction:row;
     justify-content: space-between;
     padding: 3vmin 0;
@@ -131,15 +58,17 @@ dt {
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
   }
-  .grid > *:not(:first-child) {
+  ul > *:not(:first-child) {
     border-left: 1px solid lightgray;
   }
-  .grid small {
+
+  ul li { width: 48%; }
+
+  ul {
     font-weight:bold;
     font-size: 9px;
     text-transform:uppercase;
     margin: 0px 30px;
-    display:block;
   }
 
   .marquee h1{
