@@ -1,0 +1,3 @@
+As high school students who have been diagnosed with ADHD, we know how difficult it is to fit into the system of education. Although we represent roughly 10% of school-aged children in America, “the system” was not designed to reach us using contemporary instructional methods. It is through our awareness of this fact and our ability to overcome our disadvantages, that we persevere.
+
+ADHD America was established as a 501(c)(3) with the purpose of reaching school-aged students who have been diagnosed with ADHD. Leveraging one-on-one and group academic coaching, as well as smartphone software solutions, we are committed to making a difference in the lives of students who struggle with the effects of their disorder.

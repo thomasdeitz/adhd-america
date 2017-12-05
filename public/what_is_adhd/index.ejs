@@ -1,13 +1,13 @@
 <div class="container">
   <article class="columns columns-2"></article>
-  <article class="columns columns-8">
+  <article class="columns col-sm-12 col-md-12 columns-8">
     <%- partial("/_content/definition") %>
   </article>
 </div>
 
 <div class="container">
   <article class="columns columns-2"></article>
-  <article class="columns columns-8">
+  <article class="columns col-sm-12 col-md-12 columns-8">
     <%- partial("/_content/intro") %>
   </article>
 
@@ -58,11 +58,15 @@ dt {
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
   }
-  ul > *:not(:first-child) {
+  ul > li:nth-child(even) {
     border-left: 1px solid lightgray;
   }
 
-  ul li { width: 48%; }
+  ul > li:nth-child(1), ul > li:nth-child(2) {
+    border-bottom: 1px solid lightgray;
+  }
+
+  ul li { width: 50%; margin:0; padding: 40px; box-sizing:border-box; }
 
   ul {
     font-weight:bold;

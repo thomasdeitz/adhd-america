@@ -11,7 +11,8 @@ $breakpoints: ( //list small to large.
 
 .container {
   position: relative;
-  width: 80%;
+  width: 90%;
+  min-width: 300px;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 map-get($grid-config, gutter-width);
