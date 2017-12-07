@@ -5,33 +5,53 @@
 <script>
   function d(){
     var body = document.getElementsByTagName("body");
-    var stepOne = document.getElementById("contactForm").childNodes[1];
+    var form = document.getElementById("contactForm");
+    var steps = form.getElementsByTagName("div");
+    var stepOne = form.childNodes[1];
+
+    [].forEach.call(steps, function(step) {
+        step.classList.remove("active");
+    });
 
     body[0].classList.remove('open');
+    body[0].classList.remove('review');
     body[0].classList.toggle('contact');
     stepOne.classList.add("active");
     stepOne.getElementsByTagName("input")[0].focus();
 }
 
 function step(step){
-    var stepNum = document.getElementById(step);
+    var form = document.getElementById("contactForm");
+    var currentStepNum = form.getElementsByClassName("active")[0];
+    console.log(typeof currentStepNum);
+    if (typeof currentStepNum != "undefined") {
+    var nextStep = currentStepNum.nextElementSibling;
+
+    var stepNum = nextStep;
     var f = document.getElementsByTagName("FORM")[0];
     var divs = f.getElementsByTagName("div");
     [].forEach.call(divs, function(div) {
         div.classList.remove("active");
     });
-  
-    stepNum.classList.add("active");
-    stepNum.getElementsByTagName("input")[0].focus();
+    
+    if (nextStep.nextElementSibling !== null) {
+        stepNum.classList.add("active");
+    } else {
+        review();
+    }
+    var field = stepNum.getElementsByTagName("input")[0] || stepNum.getElementsByTagName("textarea")[0];
+    field.focus();
     return false;
+    }
 }
 
 function checkTabPress(e) {
     'use strict';
     var ele = document.activeElement;
+    var body = document.getElementsByTagName("body")[0];
 
-    if (e.keyCode === 9 && ele.nodeName.toLowerCase() === 'a') {
-        step("stepTwo");
+    if (e.keyCode === 9 && body.classList.contains("contact"))     {
+        step();
     }
 }
 
@@ -40,9 +60,8 @@ document.addEventListener('keyup', function (e) {
 }, false);
 
     function review(){
-    var body = document.getElementsByTagName("body");
-        console.log('review');
-        body[0].classList.toggle('review');
+        var body = document.getElementsByTagName("body");
+        body[0].classList.add('review');
         return false;
     }
 </script>

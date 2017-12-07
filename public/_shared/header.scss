@@ -8,7 +8,7 @@ header#siteHeader {
   .logo {
     position:relative;
     width:auto;
-    height: 80px;
+    height: 12vmin;
     transition: transform .2s ease-in-out;
 
     &:hover {
@@ -18,11 +18,11 @@ header#siteHeader {
 
   .contact {
     position:absolute;
-    right: 60px;
+    right: 10vmin;
     top:50%;
     transform: translateY(-50%);
     width:auto;
-    height: 20px;
+    height: 3vmin;
     cursor: pointer;
     transition: transform .2s ease-in-out;
     
@@ -41,8 +41,8 @@ header#siteHeader {
     right:0px;
     top:50%;
     transform: translateY(-50%);
-    width:30px;
-    height:20px;
+    width:4vmin;
+    height:3vmin;
     border-bottom:$border-width solid map-get($colors, primary);
     &:after, &:before {
       content:"";

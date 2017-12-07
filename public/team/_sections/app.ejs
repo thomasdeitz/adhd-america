@@ -1,8 +1,24 @@
 <section id="theApp">
   <div class="container">
-    <div class="columns-4"></div>
-    <div class="columns-8">
+    <div class="columns-6">
+      <img src="../../assets/app.png" />
+    </div>
+    <div class="columns-6">
       <%- partial("../_content/app") %>
     </div>
   </div>
 </section>
+<style>
+.columns-6 {
+  position:relative;
+}
+
+#theApp img {
+  position:absolute;
+  width:100%;
+  height:auto;
+  le ft:50%;
+  bo ttom:25%;
+  t ransform: translateX(-50%);
+}
+</style>

@@ -11,33 +11,17 @@ $breakpoints: ( //list small to large.
 
 .container {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   width: 90%;
   min-width: 300px;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 map-get($grid-config, gutter-width);
   box-sizing: border-box;
-
-  .row{
-    margin-left: - map-get($grid-config, gutter-width);
-    > * {
-      margin-left: map-get($grid-config, gutter-width);
-    }
-  }
-  
-  &:after,
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 
   [class^="col"] {
     width: 100% - map-get($grid-config, gutter-width);
-    min-height: 1em;
-    float: left;
-    box-sizing: border-box;
-    margin-left: map-get($grid-config, gutter-width);
 
     @for $i from 1 through map-get($grid-config, columns) {
       $class: '.columns-'+$i;

@@ -41,6 +41,7 @@
     margin-bottom: $base-input-padding;
     background-color: transparent;
     padding: $base-input-padding 0;
+    color: map-get($colors, white);
     ::placeholder {
       color: rgba(black,.2s);
       font-weight: bold;
@@ -122,5 +123,5 @@
 }
 
 body.review {
-  background-color: map-get($colors, secondary);
+  background-color: mix(map-get($colors, black), map-get($colors, primary), 20);
 }
