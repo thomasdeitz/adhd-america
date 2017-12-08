@@ -1,6 +1,6 @@
 - ADHD students will learn through teaching other students to develop their own executive functions
 - Coaching is one of the most effective ways to manage ADHD
-- ADHD students’ grades will improve (both high school and middle school students)
+- ADHD students grades will improve (both high school and middle school students)
 - Lessen the temptation to self-medicate
  - Most drug use begins in middle school
  - ADHD students are 10 times more likely to start using drugs in middle school

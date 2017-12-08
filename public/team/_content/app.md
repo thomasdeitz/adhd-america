@@ -1,6 +1,6 @@
 # The App
 
-Your donations will also go towards the distribution of the **ADHDmyWay** smartphone application for kids
+Your donations will also go towards the distribution of the ADHDmyway smartphone application for kids
 
 - Helps manage the emotional and physical state of those with ADHD
 - Provides data that can help those with ADHD achieve greater levels of success
