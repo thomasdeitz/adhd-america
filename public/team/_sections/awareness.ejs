@@ -1,6 +1,8 @@
-<section id="awareness" style="background: #172C5D; color: white;">
+<section id="awareness" style="background: whiteSmoke;">
   <div class="container">
-    <div class="columns-6"></div>
+    <div class="columns-6">
+      <%- partial("../../_shared/logo.team") %>
+    </div>
     <div class="columns-6">
       <%- partial("../_content/awareness") %>
     </div>
@@ -8,7 +10,18 @@
 </section>
 
 <style>
-  #awareness h1 {
-    color:white;
+  #awareness svg {
+    height:auto;
+    width:100%;
+    transform:translateX(-100%);
+    opacity:0;
+    transition: all .5s ease-in-out  
+  }
+
+  #awareness.visible svg {
+    height:auto;
+    width:100%;
+    transform:translateX(0);
+    opacity:1;
   }
 </style>
