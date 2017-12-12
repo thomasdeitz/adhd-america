@@ -5,6 +5,10 @@ body {
   line-height:1.75;
   color: map-get($colors, black);
 
+  @media screen and (max-width: 768px ) {
+    font-size: $small-font-size*1.5;
+  }
+
   article, .marquee {
     font-size: $base-font-size;
   }
@@ -33,8 +37,16 @@ small {
 p {
   text-align: justify;
 
+  @media screen and (max-width: 768px ) {
+    font-size: $base-font-size*1.5;
+  }
+
   article &:first-of-type {
     font-size: $large-font-size;
+
+    @media screen and (max-width: 768px ) {
+      font-size: $large-font-size*1.5;
+    }
   }
 }
 
