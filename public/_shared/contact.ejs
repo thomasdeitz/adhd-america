@@ -23,7 +23,7 @@
 function step(step){
     var form = document.getElementById("contactForm");
     var currentStepNum = form.getElementsByClassName("active")[0];
-    console.log(typeof currentStepNum);
+    alert(typeof currentStepNum);
     if (typeof currentStepNum != "undefined") {
     var nextStep = currentStepNum.nextElementSibling;
 
@@ -55,7 +55,11 @@ function checkTabPress(e) {
     }
 }
 
-document.addEventListener('keyup', function (e) {
+document.addEventListener('keydown', function (e) {
+    checkTabPress(e);
+}, false);
+
+document.addEventListener('touchend', function (e) {
     checkTabPress(e);
 }, false);
 

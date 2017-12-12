@@ -13,6 +13,8 @@ div[class*="col"] {
   position:relative;
 }
 
+#theApp { overflow: hidden;}
+
 #theApp img {
   position:absolute;
   width:100%;
@@ -20,5 +22,9 @@ div[class*="col"] {
   le ft:50%;
   bo ttom:25%;
   t ransform: translateX(-50%);
+}
+@media screen and (max-width: 768px ) {
+	
+#theApp img {display: none;}
 }
 </style>

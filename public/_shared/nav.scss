@@ -36,9 +36,10 @@ body main{ transition: transform .5s cubic-bezier(.7,-0.2,.3,1.2);}
 body.open, body.contact {
   height:100vh;
   overflow:hidden;
+  position:fixed;
 
   main {
-    transform: translateY(calc(90vh - 80px)) scale(.9);
+    transform: translateY(75vh) scale(.9);
   }
 }
 body.open nav#mainNav {
