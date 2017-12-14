@@ -32,18 +32,21 @@
     console.log(document.readyState);
 }
 var allLinks = document.querySelectorAll('a[href]');
-for (var i = 0, n = allLinks.length; i < n; i++) {
+
+/* for (var i = 0, n = allLinks.length; i < n; i++) {
     allLinks[i].onclick = function (e) {
         var thisLink = this.getAttribute("href");
+        
+        alert(thisLink.getAttribute("target"));
         document.getElementsByTagName('body')[0].classList.add('loading');
         setTimeout(function() {
-  window.location.href = thisLink;
-}, 200);
+		  window.location.href = thisLink;
+		}, 200);
         
         e.preventDefault();
         
     };
-}
+} */
 
     </script>
   </body>
