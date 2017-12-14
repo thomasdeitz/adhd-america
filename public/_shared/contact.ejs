@@ -23,7 +23,6 @@
 function step(step){
     var form = document.getElementById("contactForm");
     var currentStepNum = form.getElementsByClassName("active")[0];
-    alert(typeof currentStepNum);
     if (typeof currentStepNum != "undefined") {
     var nextStep = currentStepNum.nextElementSibling;
 
