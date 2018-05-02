@@ -1,30 +1,27 @@
 <section id="theApp">
   <div class="container">
     <div class="col-md-6 col-lg-6 col-xl-6">
-      <img src="../../assets/app.png" />
+      <img src="../../assets/images/app.png" />
     </div>
     <div class="col-md-6 col-lg-6 col-xl-6">
       <%- partial("../_content/app") %>
     </div>
   </div>
 </section>
+
 <style>
-div[class*="col"] {
-  position:relative;
-}
+  div[class*="col"] {
+    position:relative;
+  }
 
-#theApp { overflow: hidden;}
+  #theApp { overflow: hidden;}
 
-#theApp img {
-  position:absolute;
-  width:100%;
-  height:auto;
-  le ft:50%;
-  bo ttom:25%;
-  t ransform: translateX(-50%);
-}
-@media screen and (max-width: 768px ) {
-	
-#theApp img {display: none;}
-}
+  #theApp img {
+    position:absolute;
+    width:100%;
+    height:auto;
+  }
+  @media screen and (max-width: 768px ) {
+    #theApp img {display: none;}
+  }
 </style>

@@ -1,6 +1,5 @@
 {
   "globals": {
-    "github_deploy": "https://thomasdeitz.github.io/qa.adhd-america.com",
     "github_deploy": "",
     "form_recipient": "pieperc@me.com",
     

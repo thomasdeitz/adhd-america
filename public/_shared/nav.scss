@@ -24,7 +24,6 @@ nav#mainNav {
   
   @for $i from 0 through 20 {
     $delay: $i/100*2;
-    @warn $delay;
     a:nth-child(#{$i}) {
       transition: transform .5s #{$delay}s cubic-bezier(.7,-0.2,.3,1.2);
     }

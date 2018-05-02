@@ -4,7 +4,7 @@
     <meta name="description" content="<%= description %>" />
     <meta name="viewport" content="width=device-width">
     <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One|Rubik:300,300i,700" rel="stylesheet">
-    <link rel="stylesheet" href="<%- github_deploy %>/main.css">
+    <link rel="stylesheet" href="/assets/styles/main.css" rel="stylesheet">
   </head>
   <body class="loading">
     <%- partial("_shared/contact.form") %>
@@ -18,36 +18,12 @@
     </main>
     <%- partial("_shared/footer") %>
     <script>
-      /*if ( document.readyState === 'complete') {
-        console.log('rere');
+      document.onreadystatechange = function () {
+        if(document.readyState === 'complete') {
+          document.getElementsByTagName('body')[0].classList.remove('loading');
+        }
       }
-      document.addEventListener("DOMContentLoaded", function(event) {
-    console.log("DOM fully loaded and parsed");
-  });*/
-  document.onreadystatechange = function () {
-
-    if(document.readyState === 'complete') {
-      document.getElementsByTagName('body')[0].classList.remove('loading');
-    }
-    console.log(document.readyState);
-}
-var allLinks = document.querySelectorAll('a[href]');
-
-/* for (var i = 0, n = allLinks.length; i < n; i++) {
-    allLinks[i].onclick = function (e) {
-        var thisLink = this.getAttribute("href");
-        
-        alert(thisLink.getAttribute("target"));
-        document.getElementsByTagName('body')[0].classList.add('loading');
-        setTimeout(function() {
-		  window.location.href = thisLink;
-		}, 200);
-        
-        e.preventDefault();
-        
-    };
-} */
-
+      var allLinks = document.querySelectorAll('a[href]');
     </script>
   </body>
 </html>
