@@ -19,5 +19,6 @@ cd $TARGET || exit 1
 ls || exit 1
 
 echo "Checking out dev from $TARGET"
-git branch || exit 1
+git checkout dev || exit 1
+ls || exit 1
 cd ../
