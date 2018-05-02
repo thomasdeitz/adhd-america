@@ -2,7 +2,7 @@
 
 ENV="master"
 
-echo "Starting $ENV deployment" 
+echo "Starting $ENV deployment." 
 echo "Getting deployment target."
 
 echo "Getting source harp.js code from $TRAVIS_REPO_SLUG"
