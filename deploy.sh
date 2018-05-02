@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ENV="dev"
+ENV="master"
 
 echo "Starting $ENV deployment" 
 echo "Getting deployment target"
