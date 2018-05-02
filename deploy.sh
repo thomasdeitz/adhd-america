@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ENV="dev"
+ENV="master"
 
 echo "Starting $ENV deployment" 
 echo "Getting deployment target."
@@ -17,8 +17,8 @@ git clone $TARGET_URL_CREDENTIALS || exit 1
 cd $TARGET || exit 1
 ls || exit 1
 
-echo "Checking out master from $TARGET"
-git checkout master || exit 1
+echo "Checking out $ENV from $TARGET"
+git checkout $ENV || exit 1
 ls || exit 1
 cd ../
 
@@ -32,7 +32,7 @@ git add -A || exit 1
 git commit --allow-empty -m "Compiled content for $CURRENT_COMMIT" || exit 1
 
 echo "Pushing updates"
-git push origin master --force --quiet || exit 1
+git push origin $ENV --force --quiet || exit 1
 
 cd ../
 
