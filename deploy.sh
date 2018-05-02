@@ -16,6 +16,7 @@ echo "Cloning repository from $TARGET"
 cd ../
 git clone $TARGET_URL || exit 1
 cd $TARGET || exit 1
+ls || exit 1
 
 echo "Checking out dev from $TARGET"
 git branch || exit 1
