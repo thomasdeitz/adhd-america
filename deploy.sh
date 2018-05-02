@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo "Starting deployment" 
-echo "Getting deployment target."
+ENV="dev"
 
-TARGET=$TARGET
+echo "Starting $ENV deployment" 
+echo "Getting deployment target."
 
 echo "Getting source harp.js code from $TRAVIS_REPO_SLUG"
 CURRENT_REPO_SLUG=$(echo $TRAVIS_REPO_SLUG | cut -d "/" -f2 )
@@ -17,8 +17,8 @@ git clone $TARGET_URL_CREDENTIALS || exit 1
 cd $TARGET || exit 1
 ls || exit 1
 
-echo "Checking out dev from $TARGET"
-git checkout dev || exit 1
+echo "Checking out $ENV from $TARGET"
+git checkout $ENV || exit 1
 ls || exit 1
 cd ../
 
@@ -32,7 +32,7 @@ git add -A || exit 1
 git commit --allow-empty -m "Compiled content for $CURRENT_COMMIT" || exit 1
 
 echo "Pushing updates"
-git push origin dev --force --quiet || exit 1
+git push origin $ENV --force --quiet || exit 1
 
 cd ../
 
