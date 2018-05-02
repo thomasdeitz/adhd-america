@@ -32,7 +32,7 @@ git add -A || exit 1
 git commit --allow-empty -m "Compiled content for $CURRENT_COMMIT" || exit 1
 
 echo "Pushing updates"
-git push origin dev --force --quiet "$TARGET_URL_WITH_CREDENTIALS" || exit 1
+git push origin dev --force --quiet || exit 1
 
 cd ../
 
