@@ -10,9 +10,9 @@ CURRENT_REPO_SLUG=$(echo $TRAVIS_REPO_SLUG | cut -d "/" -f2 )
 CURRENT_COMMIT=`git rev-parse HEAD`
 
 echo "Targeting $TARGET repository"
-TARGET_URL=$TARGET
+TARGET_URL=$TARGET_URL_CREDENTIALS
 
-echo "Cloning repository from $TARGET_URL"
+echo "Cloning repository from $TARGET"
 cd ../
 git clone $TARGET_URL || exit 1
 cd $TARGET || exit 1
@@ -21,6 +21,6 @@ echo "Checking out dev from $TARGET"
 git checkout dev || exit 1
 cd ../
 
-echo "Compiling new static content for $TARGET_URL"
+echo "Compiling new static content for $TARGET"
 harp compile $CURRENT_REPO_SLUG $TARGET || exit 1
 cd $TARGET
