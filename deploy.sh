@@ -2,8 +2,8 @@
 
 ENV="dev"
 
-echo "Starting $ENV deployment." 
-echo "Getting deployment target."
+echo "Starting $ENV deployment" 
+echo "Getting deployment target"
 
 echo "Getting source harp.js code from $TRAVIS_REPO_SLUG"
 CURRENT_REPO_SLUG=$(echo $TRAVIS_REPO_SLUG | cut -d "/" -f2 )
