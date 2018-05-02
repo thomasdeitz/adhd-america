@@ -18,9 +18,5 @@ git clone $TARGET_URL || exit 1
 cd $TARGET || exit 1
 
 echo "Checking out dev from $TARGET"
-git checkout dev || exit 1
+git branch || exit 1
 cd ../
-
-echo "Compiling new static content for $TARGET"
-harp compile $CURRENT_REPO_SLUG $TARGET || exit 1
-cd $TARGET
