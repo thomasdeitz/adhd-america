@@ -36,7 +36,7 @@ $ git branch
 ##### Deployment Path
 
 ```
-dev –– mereges into ––> master
+dev –– merges into ––> master
 ```
 
 ##### Helpful harp Documentation
@@ -47,6 +47,10 @@ dev –– mereges into ––> master
 4. [Globals](http://harpjs.com/docs/development/globals)
 5. [Metadata](http://harpjs.com/docs/development/metadata)
 
+### Known Issues 05/02/2018
+
+When merging dev into master be careful not to merge the deploy.sh file. This file contains an environment specific variable that will break the deployment setup. I am working on getting .gitattributes forking to fix this issue.
+
 ### Libraries & Technology
 
 1. [harpjs](harpjs.com) - The static web server with built-in preprocessing.
@@ -54,5 +58,3 @@ dev –– mereges into ––> master
 3. [Sass](sass-lang.com) - CSS with superpowers: Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
 4. [Travis CI](travis-ci.org) - Build apps with confidence: Focus on writing code. Let Travis CI take care of running your tests and deploying your apps.
 5. [GitHub](github.com) - The world's leading software development platform
-
-
